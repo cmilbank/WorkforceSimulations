@@ -54,5 +54,5 @@ output <- data.frame(sim_results)
 
 f <- ggplot(output, aes(x = sim_results)) +
   geom_histogram(color = "black", fill = "blue2", binwidth = 1) +
-  labs(title = "Workforce Simulations", x = "Number of terminations", "Number of occurences")
+  labs(title = "Workforce Simulations", x = "Number of terminations", y = "Number of occurences")
 f
