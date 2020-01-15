@@ -1,13 +1,13 @@
-#create some random attrition probabilities by employee
+#create some random attrition probabilities by employee (mean = .25, standard deviation = .05)
 #if you already have annual employee attrition probabilities you can ignore the code below and read them into a field called "p_term_annual" 
 
-data <- data.frame("EE" <- c(1:10000), p_term_annual <- 0)
-data$p_term_annual <- 3*rnorm(nrow(data), .1, .025)*runif(nrow(data), 0, 1)^2
+data <- data.frame("EE" <- c(1:500), p_term_annual <- 0)
+data$p_term_annual <- rnorm(nrow(data), .25, .05)
 
 #set parameters (number of months to forecast and number of simulations)
 
 no_months <- 12
-n_sims <- 5000
+n_sims <- 10000
 
 #load ggplot library
 
